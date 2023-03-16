@@ -6,7 +6,7 @@ import { rps, rpsls } from './lib/rpsls.js'
 const app = express();
 
 var args = minimist(process.argv.slice(2));
-const PORT = args.port || 5000
+const PORT = args.port || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
@@ -24,11 +24,11 @@ app.get('/app/rpsls', (req, res) => {
 })
 
 app.get('/app/rps/play', (req, res) => {
-	res.status(200).send(rps(req.body.shot));
+	res.status(200).send(rps(req.query.shot));
 })
 
 app.get('/app/rpsls/play', (req, res) => {
-	res.status(200).send(rps(req.body.shot));
+	res.status(200).send(rps(req.query.shot));
 })
 
 app.post('/app/rps/play', (req, res) => {
