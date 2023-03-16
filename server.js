@@ -39,12 +39,12 @@ app.post('/app/rpsls/play', (req, res) => {
 	res.status(200).send(rpsls(req.body.shot));
 })
 
-app.post('/app/rps/play/:shot', (req, res) => {
-	res.status(200).send(rps(req.params.shot));
+app.post('/app/rps/play/:arg', (req, res) => {
+	res.status(200).send(rps(req.params.arg));
 })
 
-app.post('/app/rps/play/:shot', (req, res) => {
-	res.status(200).send(rpsls(req.params.shot));
+app.post('/app/rps/play/:arg', (req, res) => {
+	res.status(200).send(rpsls(req.params.arg));
 })
 
 app.get('*', (req, res) => {
