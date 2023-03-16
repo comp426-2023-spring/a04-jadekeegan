@@ -43,7 +43,7 @@ app.get('/app/rps/play/:arg', (req, res) => {
 	res.status(200).send(rps(req.params.arg));
 })
 
-app.get('/app/rps/play/:arg', (req, res) => {
+app.get('/app/rpsls/play/:arg', (req, res) => {
 	res.status(200).send(rpsls(req.params.arg));
 })
 
