@@ -24,11 +24,11 @@ app.get('/app/rpsls/', (req, res) => {
 });
 
 app.get('/app/rps/play', (req, res) => {
-	res.status(200).send(rps(req.body))
+	res.status(200).send(rps(req.query.body))
 });
 
 app.get('/app/rpsls/play/', (req, res) => {
-	res.status(200).send(rpsls(req.body))
+	res.status(200).send(rpsls(req.query.body))
 });
 
 app.get('/app/rps/play/:shot/', (req, res) => {
