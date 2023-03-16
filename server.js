@@ -35,12 +35,12 @@ app.get('/app/rpsls/play/', (req, res) => {
 	res.status(200).send(rpsls(req.body))
 });
 
-app.get('/app/rps/play/(rock|paper|scissors)/', (req, res) => {
-	res.status(200).send(rps(req.params[0]))
+app.get('/app/rps/play/:shot/', (req, res) => {
+	res.status(200).send(rps(req.params.shot))
 });
 
-app.get('/app/rps/play/(rock|paper|scissors|lizard|spock)/', (req, res) => {
-	res.status(200).send(rpsls(req.params[0]))
+app.get('/app/rps/play/:shot/', (req, res) => {
+	res.status(200).send(rpsls(req.params.shot))
 });
 
 app.get('*', (req, res) => {
