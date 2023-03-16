@@ -42,3 +42,7 @@ app.post('/app/rps/play/:shot', (req, res) => {
 app.get('*', (req, res) => {
 	res.status(404).send('404 NOT FOUND');
 })
+
+app.listen(PORT, () => {
+	console.log(`App listening on port ${PORT}`);
+}
