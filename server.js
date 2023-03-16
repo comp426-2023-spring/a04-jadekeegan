@@ -8,13 +8,6 @@ const app = express();
 var args = minimist(process.argv.slice(2));
 const PORT = args.port || 5000
 
-app.listen(PORT, (error) => {
-	if(!error)
-		console.log("Server is Successfully Running, and App is listening on port " + PORT)
-	else
-		console.log("Error occurred, server can't start", error)
-});
-
 app.get('/app/', (req, res) => {
 	res.status(200).send("200 OK")
 });
