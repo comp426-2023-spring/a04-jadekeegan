@@ -11,15 +11,15 @@ const PORT = args.port || 5000
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
-app.get('/app/', (req, res) => {
+app.get('/app', (req, res) => {
 	res.status(200).send("200 OK");
 })
 
-app.get('/app/rps/', (req, res) => {
+app.get('/app/rps', (req, res) => {
 	res.status(200).send(rps());
 })
 
-app.get('/app/rpsls/', (req, res) => {
+app.get('/app/rpsls', (req, res) => {
 	res.status(200).send(rpsls());
 })
 
@@ -27,15 +27,15 @@ app.get('/app/rps/play', (req, res) => {
 	res.status(200).send(rps(req.query.body));
 })
 
-app.get('/app/rpsls/play/', (req, res) => {
+app.get('/app/rpsls/play', (req, res) => {
 	res.status(200).send(rpsls(req.query.body));
 })
 
-app.post('/app/rps/play/:shot/', (req, res) => {
+app.post('/app/rps/play/:shot', (req, res) => {
 	res.status(200).send(rps(req.params.shot));
 })
 
-app.post('/app/rps/play/:shot/', (req, res) => {
+app.post('/app/rps/play/:shot', (req, res) => {
 	res.status(200).send(rpsls(req.params.shot));
 })
 
